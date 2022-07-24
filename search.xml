@@ -24,9 +24,9 @@
             
             <tag> 技术 </tag>
             
-            <tag> hexo </tag>
-            
             <tag> 博客 </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       
@@ -45,6 +45,8 @@
       <categories>
           
           <category> 技术分享 </category>
+          
+          <category> markdown </category>
           
       </categories>
       
@@ -70,6 +72,8 @@
       
       
       <categories>
+          
+          <category> 技术分享 </category>
           
           <category> 博客 </category>
           
