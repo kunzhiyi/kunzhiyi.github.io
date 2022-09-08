@@ -116,13 +116,6 @@
 
   
   <url>
-    <loc>https://kunzhiyi.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2022-09-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kunzhiyi.github.io/tags/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2022-09-08</lastmod>
     <changefreq>daily</changefreq>
@@ -131,6 +124,13 @@
   
   <url>
     <loc>https://kunzhiyi.github.io/tags/hexo/</loc>
+    <lastmod>2022-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kunzhiyi.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2022-09-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
