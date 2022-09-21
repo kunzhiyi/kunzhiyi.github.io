@@ -1,0 +1,459 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Re:传热学笔记 | Kunzhiyi's Blog</title><meta name="keywords" content="笔记,传热学"><meta name="author" content="Kunzhiyi"><meta name="copyright" content="Kunzhiyi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="传热学笔记第一章 绪论1.2 热量传递的基本方式&#x3D;&#x3D;传热的三种方式：&#x3D;&#x3D;热传导、热对流、热辐射 1.2.1 热传导&#x3D;&#x3D;一维热传导方程：&#x3D;&#x3D;$$\phi &#x3D;A\lambda \frac{t_{w1} -t_{w2}}{\delta }$$  例题例1.1： $$q&#x3D;796000 (W&#x2F;m^{2} )$$ 1.3 传热过程和导热系数 &#x3D;&#x3D;传热过程热流量公式&#x3D;&#x3D;  例题例1.2：  例1.3：  第二">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Re:传热学笔记">
+<meta property="og:url" content="https://kunzhiyi.github.io/posts/4.html">
+<meta property="og:site_name" content="Kunzhiyi&#39;s Blog">
+<meta property="og:description" content="传热学笔记第一章 绪论1.2 热量传递的基本方式&#x3D;&#x3D;传热的三种方式：&#x3D;&#x3D;热传导、热对流、热辐射 1.2.1 热传导&#x3D;&#x3D;一维热传导方程：&#x3D;&#x3D;$$\phi &#x3D;A\lambda \frac{t_{w1} -t_{w2}}{\delta }$$  例题例1.1： $$q&#x3D;796000 (W&#x2F;m^{2} )$$ 1.3 传热过程和导热系数 &#x3D;&#x3D;传热过程热流量公式&#x3D;&#x3D;  例题例1.2：  例1.3：  第二">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051847030.png">
+<meta property="article:published_time" content="2022-09-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-09-21T09:41:09.658Z">
+<meta property="article:author" content="Kunzhiyi">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="传热学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051847030.png"><link rel="shortcut icon" href="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051844692.jpg"><link rel="canonical" href="https://kunzhiyi.github.io/posts/4"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"一年之内的产物","messageNext":"技术可能存在过期"},
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Kunzhiyi","link":"链接: ","source":"来源: Kunzhiyi's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Re:传热学笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-09-21 17:41:09'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><link defer rel="stylesheet" href="/css/customm.css" ><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/icon.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/background.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/index_ee.css"><meta name="generator" content="Hexo 5.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Kunzhiyi's Blog" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051844325.png" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-book"></i><span> 说说</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时轴归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051847030.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Kunzhiyi's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fas fa-book"></i><span> 说说</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时轴归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Re:传热学笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-10T16:00:00.000Z" title="发表于 2022-09-11 00:00:00">2022-09-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-21T09:41:09.658Z" title="更新于 2022-09-21 17:41:09">2022-09-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/%E4%BC%A0%E7%83%AD%E5%AD%A6/">传热学</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">810</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Re:传热学笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="传热学笔记"><a href="#传热学笔记" class="headerlink" title=" 传热学笔记"></a><center> 传热学笔记</center></h1><h1 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h1><h2 id="1-2-热量传递的基本方式"><a href="#1-2-热量传递的基本方式" class="headerlink" title="1.2 热量传递的基本方式"></a>1.2 热量传递的基本方式</h2><h4 id="传热的三种方式："><a href="#传热的三种方式：" class="headerlink" title="==传热的三种方式：=="></a>==<strong>传热的三种方式：</strong>==</h4><p>热传导、热对流、热辐射</p>
+<h3 id="1-2-1-热传导"><a href="#1-2-1-热传导" class="headerlink" title="1.2.1 热传导"></a>1.2.1 热传导</h3><h4 id="一维热传导方程："><a href="#一维热传导方程：" class="headerlink" title="==一维热传导方程：=="></a><u>==<strong>一维热传导方程：</strong>==</u></h4><p>$$<br>\phi =A\lambda \frac{t_{w1} -t_{w2}}{\delta }<br>$$</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051909921.png"></p>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><p><strong>例1.1：</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051909125.png"><br>$$<br>q=796000 (W/m^{2} )<br>$$</p>
+<h2 id="1-3-传热过程和导热系数"><a href="#1-3-传热过程和导热系数" class="headerlink" title="1.3 传热过程和导热系数"></a>1.3 传热过程和导热系数</h2><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051909019.png"></p>
+<h3 id="传热过程热流量公式"><a href="#传热过程热流量公式" class="headerlink" title="==传热过程热流量公式=="></a>==<u>传热过程热流量公式</u>==</h3><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051910712.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051910079.png"></p>
+<h2 id="例题-1"><a href="#例题-1" class="headerlink" title="例题"></a>例题</h2><p><strong>例1.2：</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051911053.png"></p>
+<p><strong>例1.3：</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051912288.png"></p>
+<h1 id="第二章-导热基本定律"><a href="#第二章-导热基本定律" class="headerlink" title="第二章 导热基本定律"></a>第二章 导热基本定律</h1><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051913514.png"></p>
+<h2 id="2-1-导热基本定律–傅里叶定律"><a href="#2-1-导热基本定律–傅里叶定律" class="headerlink" title="2.1 导热基本定律–傅里叶定律"></a>2.1 导热基本定律–傅里叶定律</h2><h3 id="2-1-1-温度场"><a href="#2-1-1-温度场" class="headerlink" title="2.1.1 温度场"></a>2.1.1 温度场</h3><p>一维稳态温度场：$ t=f(x) $</p>
+<p>等温面、等温线</p>
+<h3 id="2-1-2-导热基本定律"><a href="#2-1-2-导热基本定律" class="headerlink" title="2.1.2 导热基本定律"></a>2.1.2 导热基本定律</h3><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051913541.png"></p>
+<h3 id="2-1-3-导热系数"><a href="#2-1-3-导热系数" class="headerlink" title="2.1.3 导热系数"></a>2.1.3 导热系数</h3><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051915411.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051915099.png" alt="QQ截图20220905173503"></p>
+<h2 id="例题-2"><a href="#例题-2" class="headerlink" title="例题"></a>例题</h2><p><strong>例2.1</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051915231.png" alt="QQ截图20220905173944"></p>
+<h2 id="2-2-傅里叶定律"><a href="#2-2-傅里叶定律" class="headerlink" title="2.2 傅里叶定律"></a>2.2 傅里叶定律</h2><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051914591.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051914613.png"></p>
+<h2 id="2-3-导热率"><a href="#2-3-导热率" class="headerlink" title="2.3 导热率"></a>2.3 导热率</h2><h3 id="湿度"><a href="#湿度" class="headerlink" title="湿度"></a>湿度</h3><p>绝热保温材料受湿度影响较大，同时也要考虑防冻。</p>
+<h2 id="2-4-导热问题的数学描述"><a href="#2-4-导热问题的数学描述" class="headerlink" title="2.4 导热问题的数学描述"></a>2.4 导热问题的数学描述</h2><h3 id="2-4-1-导热微分方程"><a href="#2-4-1-导热微分方程" class="headerlink" title="2.4.1 导热微分方程"></a>2.4.1 导热微分方程</h3><p><strong>理论基础：</strong>傅里叶定律+能量守恒定律</p>
+<p><strong>对导热物体作几点假设：</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071807300.png" alt="QQ截图20220907161745"></p>
+<p><strong>数学模型的建立：</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071810901.png" alt="QQ截图20220907162415"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071810277.png" alt="QQ截图20220907163412"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071811448.png" alt="QQ截图20220907163649"></p>
+<p><strong>推导得：</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071811972.png" alt="QQ截图20220907163900"></p>
+<h4 id="化简得："><a href="#化简得：" class="headerlink" title="==化简得：=="></a><u>==化简得：==</u></h4><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071811343.png" alt="QQ截图20220907164038"></p>
+<p><strong>热扩散率：</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071811510.png" alt="QQ截图20220907165721"></p>
+<p><strong>引入拉普拉斯算子化简得：</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071811849.png" alt="QQ截图20220907170156"></p>
+<h4 id="不同情况下的微分方程："><a href="#不同情况下的微分方程：" class="headerlink" title="==不同情况下的微分方程：=="></a><u>==不同情况下的微分方程：==</u></h4><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071811563.png" alt="QQ截图20220907170146"></p>
+<h4 id="热扩散率："><a href="#热扩散率：" class="headerlink" title="热扩散率："></a><strong>热扩散率：</strong></h4><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071811661.png" alt="QQ截图20220907171006"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071811166.png" alt="QQ截图20220907171226"></p>
+<p><strong>总结：</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071811674.png" alt="QQ截图20220907171340"></p>
+<h3 id="2-4-2-定解条件"><a href="#2-4-2-定解条件" class="headerlink" title="2.4.2 定解条件"></a>2.4.2 定解条件</h3><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071811599.png" alt="QQ截图20220907171630"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071811860.png" alt="QQ截图20220907171830"></p>
+<h4 id="初始条件（时间条件）："><a href="#初始条件（时间条件）：" class="headerlink" title="初始条件（时间条件）："></a>初始条件（时间条件）：</h4><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071811337.png" alt="QQ截图20220907172008"></p>
+<h4 id="边界条件："><a href="#边界条件：" class="headerlink" title="==边界条件：=="></a>==边界条件：==</h4><ol>
+<li>==第一类边界条件：已知任何时刻下，物体边界上的温度值…==</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071811539.png" alt="QQ截图20220907172212"></p>
+<ol start="2">
+<li>==第二类边界条件：已知物体边界上任何时刻热流密度的分布及变化规律、特例（绝热边界面）==</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071811652.png" alt="QQ截图20220907172716"></p>
+<ol start="3">
+<li>==第三类边界条件：已知任一时刻边界面的对流换热系数$$h$$和周围流体的温度$$t_{f} $$==</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071812864.png" alt="QQ截图20220907173103"></p>
+<h2 id="例题-3"><a href="#例题-3" class="headerlink" title="例题"></a>例题</h2><p><strong>例2.2</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071812112.png" alt="QQ截图20220907173456"></p>
+<p><strong>例2.3：</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071812245.png" alt="QQ截图20220907173702"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209071812062.png" alt="QQ截图20220907173823"></p>
+<p><strong>例2.3：</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142044181.png" alt="QQ截图20220914160814"></p>
+<p>4、一厚度为$$40mm$$的无限大平壁，其稳态温度分布为：$$ t=(180-1800x^{2})℃$$。若平壁材料导热系数$$=50W/(m.k)$$，试求:1.平壁两侧表面处的热流密度;2.平壁中是否有内热源?若有的话，它的强度是多大?</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142044618.png" alt="QQ截图20220914160839"></p>
+<h1 id="第三章-稳态导热"><a href="#第三章-稳态导热" class="headerlink" title="第三章 稳态导热"></a>第三章 稳态导热</h1><h2 id="3-1-通过平壁导热"><a href="#3-1-通过平壁导热" class="headerlink" title="3.1 通过平壁导热"></a>3.1 通过平壁导热</h2><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142044221.png" alt="QQ截图20220914161214"></p>
+<h3 id="3-1-1-第一类边界条件下平壁一维稳态导热"><a href="#3-1-1-第一类边界条件下平壁一维稳态导热" class="headerlink" title="3.1.1 第一类边界条件下平壁一维稳态导热"></a>3.1.1 第一类边界条件下平壁一维稳态导热</h3><h4 id="1-单层平壁"><a href="#1-单层平壁" class="headerlink" title="1.单层平壁"></a>1.单层平壁</h4><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142044459.png" alt="QQ截图20220914162356"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142044355.png" alt="QQ截图20220914161905"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142044105.png" alt="QQ截图20220914162535"></p>
+<h4 id="2-多层平壁"><a href="#2-多层平壁" class="headerlink" title="2.多层平壁"></a>2.多层平壁</h4><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142044097.png" alt="QQ截图20220914162918"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142044342.png" alt="QQ截图20220914163413"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142044242.png" alt="QQ截图20220914163518"></p>
+<h3 id="例题："><a href="#例题：" class="headerlink" title="例题："></a><strong>例题：</strong></h3><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142044557.png" alt="QQ截图20220914164350"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142044374.png" alt="QQ截图20220914165938"></p>
+<h3 id="3-1-2-第三类边界条件下平板一维稳态导热"><a href="#3-1-2-第三类边界条件下平板一维稳态导热" class="headerlink" title="3.1.2 第三类边界条件下平板一维稳态导热"></a>3.1.2 第三类边界条件下平板一维稳态导热</h3><h4 id="1-单层平壁-1"><a href="#1-单层平壁-1" class="headerlink" title="1.单层平壁"></a>1.单层平壁</h4><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142045217.png" alt="QQ截图20220914170506"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142045896.png" alt="QQ截图20220914170912"></p>
+<h4 id="2-多层平壁-1"><a href="#2-多层平壁-1" class="headerlink" title="2.多层平壁"></a>2.多层平壁</h4><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142045782.png" alt="QQ截图20220914171031"></p>
+<h3 id="例题：-1"><a href="#例题：-1" class="headerlink" title="例题："></a>例题：</h3><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142045343.png" alt="QQ截图20220914171221"></p>
+<h2 id="3-2-通过圆筒壁的导热"><a href="#3-2-通过圆筒壁的导热" class="headerlink" title="3.2 通过圆筒壁的导热"></a>3.2 通过圆筒壁的导热</h2><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142045137.png" alt="QQ截图20220914172730"></p>
+<h3 id="3-2-1第一类边界条件下单层圆筒壁稳态导热量"><a href="#3-2-1第一类边界条件下单层圆筒壁稳态导热量" class="headerlink" title="3.2.1第一类边界条件下单层圆筒壁稳态导热量"></a>3.2.1第一类边界条件下单层圆筒壁稳态导热量</h3><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142045833.png" alt="QQ截图20220914172942"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142045364.png" alt="QQ截图20220914173252"></p>
+<h3 id="3-2-2第三类边界条件下单层圆筒壁稳态导热量"><a href="#3-2-2第三类边界条件下单层圆筒壁稳态导热量" class="headerlink" title="3.2.2第三类边界条件下单层圆筒壁稳态导热量"></a>3.2.2第三类边界条件下单层圆筒壁稳态导热量</h3><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209142045454.png" alt="QQ截图20220914173607"></p>
+<h3 id="3-2-3第一、三类边界条件下n层圆筒壁稳态导热量"><a href="#3-2-3第一、三类边界条件下n层圆筒壁稳态导热量" class="headerlink" title="3.2.3第一、三类边界条件下n层圆筒壁稳态导热量"></a>3.2.3第一、三类边界条件下n层圆筒壁稳态导热量</h3><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209191616745.png" alt="QQ截图20220919161510"></p>
+<h2 id="例题-4"><a href="#例题-4" class="headerlink" title="例题"></a>例题</h2><p>例3.1</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209211739639.png" alt="QQ截图20220921171752"></p>
+<p>例3.2</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209211739962.png" alt="QQ截图20220921173124"></p>
+<p>例3.3</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209211741784.png" alt="QQ截图20220921173733"></p>
+<h1 id="第四章-非稳态导热"><a href="#第四章-非稳态导热" class="headerlink" title="第四章 非稳态导热"></a>第四章 非稳态导热</h1><h2 id="4-1-基本概念"><a href="#4-1-基本概念" class="headerlink" title="4.1 基本概念"></a>4.1 基本概念</h2><h3 id="4-1-1-定义及分类"><a href="#4-1-1-定义及分类" class="headerlink" title="4.1.1 定义及分类"></a>4.1.1 定义及分类</h3><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209191621986.png" alt="QQ截图20220919162036"></p>
+<h3 id="4-1-2-不同阶段"><a href="#4-1-2-不同阶段" class="headerlink" title="4.1.2 不同阶段"></a>4.1.2 不同阶段</h3><p>瞬态导热有三个阶段：初始阶段、发展阶段、稳定阶段</p>
+<h3 id="4-1-3"><a href="#4-1-3" class="headerlink" title="4.1.3"></a>4.1.3</h3><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209191721926.png" alt="QQ截图20220919162921"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209191721250.png" alt="QQ截图20220919163356"></p>
+<h4 id="Bi数"><a href="#Bi数" class="headerlink" title="==Bi数=="></a>==Bi数==</h4><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209191722825.png" alt="QQ截图20220919164104"></p>
+<h2 id="4-2-零维问题的集总参数法"><a href="#4-2-零维问题的集总参数法" class="headerlink" title="4.2 零维问题的集总参数法"></a>4.2 零维问题的集总参数法</h2><p>（Bi&lt;=0.1）</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209191722597.png" alt="QQ截图20220919172134"></p>
+<h3 id="4-2-1-集总参数法温度场分析解"><a href="#4-2-1-集总参数法温度场分析解" class="headerlink" title="4.2.1 集总参数法温度场分析解"></a>4.2.1 集总参数法温度场分析解</h3><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209191745106.png" alt="QQ截图20220919172550"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209191745729.png" alt="QQ截图20220919172954"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209191745926.png" alt="QQ截图20220919172656"></p>
+<h3 id="4-2-2-导热量计算式、时间常数与傅里叶数"><a href="#4-2-2-导热量计算式、时间常数与傅里叶数" class="headerlink" title="4.2.2 导热量计算式、时间常数与傅里叶数"></a>4.2.2 导热量计算式、时间常数与傅里叶数</h3><h4 id="1-导热量计算式"><a href="#1-导热量计算式" class="headerlink" title="1. 导热量计算式"></a>1. 导热量计算式</h4><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209191744076.png" alt="QQ截图20220919173129"></p>
+<h4 id="2-时间常数"><a href="#2-时间常数" class="headerlink" title="2. 时间常数"></a>2. 时间常数</h4><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209191744300.png" alt="QQ截图20220919173756"></p>
+<p>==式(3)和时间常数==</p>
+<h4 id="3-傅里叶数"><a href="#3-傅里叶数" class="headerlink" title="3. 傅里叶数"></a>3. 傅里叶数</h4><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209211614050.png" alt="QQ截图20220921161423"></p>
+<p>==第一行公式、傅里叶数表达式==</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209211707253.png" alt="QQ截图20220921161858"></p>
+<h3 id="是否可以使用集总参数法的判断依据"><a href="#是否可以使用集总参数法的判断依据" class="headerlink" title="是否可以使用集总参数法的判断依据"></a>是否可以使用集总参数法的判断依据</h3><p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209211707859.png" alt="QQ截图20220921162446"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209211707474.png" alt="QQ截图20220921162719"></p>
+<h2 id="例题-5"><a href="#例题-5" class="headerlink" title="例题"></a>例题</h2><p>例4.1</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209211707186.png" alt="QQ截图20220921164620"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209211707676.png" alt="QQ截图20220921164037"></p>
+<p>例4.2</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209211707326.png" alt="QQ截图20220921164420"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209211739317.png" alt="QQ截图20220921170533"></p>
+<p>例4.3</p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209211739091.png" alt="QQ截图20220921171039"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Kunzhiyi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://kunzhiyi.github.io/posts/4.html">https://kunzhiyi.github.io/posts/4.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://kunzhiyi.github.io" target="_blank">Kunzhiyi's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E4%BC%A0%E7%83%AD%E5%AD%A6/">传热学</a></div><div class="post_share"><div class="social-share" data-image="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051847030.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051849366.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051849366.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051849640.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051849640.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/2.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051856284.png" onerror="onerror=null;src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Markdown在Typora中的食用方法（未完待续）</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Livere</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NzIxOC8zMzY4Mg=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051844325.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Kunzhiyi</div><div class="author-info__description">这是一个测试</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://kunzhiyi.github.io/"><i class="fab fa-home"></i><span>个人主页</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/kunzhiyi" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1052159650@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051838003.jpg" target="_blank" title="wechat"><i class="fab fa-weixin"></i></a><a class="social-icon" href="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051838419.jpg" target="_blank" title="qq"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://space.bilibili.com/351519433" target="_blank" title="bilibili"><i class="fas fa-brands fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">Hello！This is Kunzhiyi's blog. It's a small place to record my life and share technology and ideas. I hope you can find something insteresting or useful. If you have any questions or ideas want to share with me,you can contact me through the link above the announcement (Please explain your intention first!) I will reply as soon as I see it! I will be very glad to make friends with you!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%A0%E7%83%AD%E5%AD%A6%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text"> 传热学笔记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA"><span class="toc-number">2.</span> <span class="toc-text">第一章 绪论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E7%83%AD%E9%87%8F%E4%BC%A0%E9%80%92%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%96%B9%E5%BC%8F"><span class="toc-number">2.1.</span> <span class="toc-text">1.2 热量传递的基本方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%A0%E7%83%AD%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F%EF%BC%9A"><span class="toc-number">2.1.0.1.</span> <span class="toc-text">&#x3D;&#x3D;传热的三种方式：&#x3D;&#x3D;</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-%E7%83%AD%E4%BC%A0%E5%AF%BC"><span class="toc-number">2.1.1.</span> <span class="toc-text">1.2.1 热传导</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E7%BB%B4%E7%83%AD%E4%BC%A0%E5%AF%BC%E6%96%B9%E7%A8%8B%EF%BC%9A"><span class="toc-number">2.1.1.1.</span> <span class="toc-text">&#x3D;&#x3D;一维热传导方程：&#x3D;&#x3D;</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-number">2.2.</span> <span class="toc-text">例题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E4%BC%A0%E7%83%AD%E8%BF%87%E7%A8%8B%E5%92%8C%E5%AF%BC%E7%83%AD%E7%B3%BB%E6%95%B0"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 传热过程和导热系数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%A0%E7%83%AD%E8%BF%87%E7%A8%8B%E7%83%AD%E6%B5%81%E9%87%8F%E5%85%AC%E5%BC%8F"><span class="toc-number">2.3.1.</span> <span class="toc-text">&#x3D;&#x3D;传热过程热流量公式&#x3D;&#x3D;</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98-1"><span class="toc-number">2.4.</span> <span class="toc-text">例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%AF%BC%E7%83%AD%E5%9F%BA%E6%9C%AC%E5%AE%9A%E5%BE%8B"><span class="toc-number">3.</span> <span class="toc-text">第二章 导热基本定律</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E5%AF%BC%E7%83%AD%E5%9F%BA%E6%9C%AC%E5%AE%9A%E5%BE%8B%E2%80%93%E5%82%85%E9%87%8C%E5%8F%B6%E5%AE%9A%E5%BE%8B"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 导热基本定律–傅里叶定律</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-%E6%B8%A9%E5%BA%A6%E5%9C%BA"><span class="toc-number">3.1.1.</span> <span class="toc-text">2.1.1 温度场</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-%E5%AF%BC%E7%83%AD%E5%9F%BA%E6%9C%AC%E5%AE%9A%E5%BE%8B"><span class="toc-number">3.1.2.</span> <span class="toc-text">2.1.2 导热基本定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-3-%E5%AF%BC%E7%83%AD%E7%B3%BB%E6%95%B0"><span class="toc-number">3.1.3.</span> <span class="toc-text">2.1.3 导热系数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98-2"><span class="toc-number">3.2.</span> <span class="toc-text">例题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E5%82%85%E9%87%8C%E5%8F%B6%E5%AE%9A%E5%BE%8B"><span class="toc-number">3.3.</span> <span class="toc-text">2.2 傅里叶定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E5%AF%BC%E7%83%AD%E7%8E%87"><span class="toc-number">3.4.</span> <span class="toc-text">2.3 导热率</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B9%BF%E5%BA%A6"><span class="toc-number">3.4.1.</span> <span class="toc-text">湿度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-%E5%AF%BC%E7%83%AD%E9%97%AE%E9%A2%98%E7%9A%84%E6%95%B0%E5%AD%A6%E6%8F%8F%E8%BF%B0"><span class="toc-number">3.5.</span> <span class="toc-text">2.4 导热问题的数学描述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-1-%E5%AF%BC%E7%83%AD%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">3.5.1.</span> <span class="toc-text">2.4.1 导热微分方程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%96%E7%AE%80%E5%BE%97%EF%BC%9A"><span class="toc-number">3.5.1.1.</span> <span class="toc-text">&#x3D;&#x3D;化简得：&#x3D;&#x3D;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E6%83%85%E5%86%B5%E4%B8%8B%E7%9A%84%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%EF%BC%9A"><span class="toc-number">3.5.1.2.</span> <span class="toc-text">&#x3D;&#x3D;不同情况下的微分方程：&#x3D;&#x3D;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%83%AD%E6%89%A9%E6%95%A3%E7%8E%87%EF%BC%9A"><span class="toc-number">3.5.1.3.</span> <span class="toc-text">热扩散率：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-2-%E5%AE%9A%E8%A7%A3%E6%9D%A1%E4%BB%B6"><span class="toc-number">3.5.2.</span> <span class="toc-text">2.4.2 定解条件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E6%9D%A1%E4%BB%B6%EF%BC%88%E6%97%B6%E9%97%B4%E6%9D%A1%E4%BB%B6%EF%BC%89%EF%BC%9A"><span class="toc-number">3.5.2.1.</span> <span class="toc-text">初始条件（时间条件）：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%B9%E7%95%8C%E6%9D%A1%E4%BB%B6%EF%BC%9A"><span class="toc-number">3.5.2.2.</span> <span class="toc-text">&#x3D;&#x3D;边界条件：&#x3D;&#x3D;</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98-3"><span class="toc-number">3.6.</span> <span class="toc-text">例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%A8%B3%E6%80%81%E5%AF%BC%E7%83%AD"><span class="toc-number">4.</span> <span class="toc-text">第三章 稳态导热</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E9%80%9A%E8%BF%87%E5%B9%B3%E5%A3%81%E5%AF%BC%E7%83%AD"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 通过平壁导热</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1-%E7%AC%AC%E4%B8%80%E7%B1%BB%E8%BE%B9%E7%95%8C%E6%9D%A1%E4%BB%B6%E4%B8%8B%E5%B9%B3%E5%A3%81%E4%B8%80%E7%BB%B4%E7%A8%B3%E6%80%81%E5%AF%BC%E7%83%AD"><span class="toc-number">4.1.1.</span> <span class="toc-text">3.1.1 第一类边界条件下平壁一维稳态导热</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%8D%95%E5%B1%82%E5%B9%B3%E5%A3%81"><span class="toc-number">4.1.1.1.</span> <span class="toc-text">1.单层平壁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%A4%9A%E5%B1%82%E5%B9%B3%E5%A3%81"><span class="toc-number">4.1.1.2.</span> <span class="toc-text">2.多层平壁</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98%EF%BC%9A"><span class="toc-number">4.1.2.</span> <span class="toc-text">例题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-%E7%AC%AC%E4%B8%89%E7%B1%BB%E8%BE%B9%E7%95%8C%E6%9D%A1%E4%BB%B6%E4%B8%8B%E5%B9%B3%E6%9D%BF%E4%B8%80%E7%BB%B4%E7%A8%B3%E6%80%81%E5%AF%BC%E7%83%AD"><span class="toc-number">4.1.3.</span> <span class="toc-text">3.1.2 第三类边界条件下平板一维稳态导热</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%8D%95%E5%B1%82%E5%B9%B3%E5%A3%81-1"><span class="toc-number">4.1.3.1.</span> <span class="toc-text">1.单层平壁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%A4%9A%E5%B1%82%E5%B9%B3%E5%A3%81-1"><span class="toc-number">4.1.3.2.</span> <span class="toc-text">2.多层平壁</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98%EF%BC%9A-1"><span class="toc-number">4.1.4.</span> <span class="toc-text">例题：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E9%80%9A%E8%BF%87%E5%9C%86%E7%AD%92%E5%A3%81%E7%9A%84%E5%AF%BC%E7%83%AD"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 通过圆筒壁的导热</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1%E7%AC%AC%E4%B8%80%E7%B1%BB%E8%BE%B9%E7%95%8C%E6%9D%A1%E4%BB%B6%E4%B8%8B%E5%8D%95%E5%B1%82%E5%9C%86%E7%AD%92%E5%A3%81%E7%A8%B3%E6%80%81%E5%AF%BC%E7%83%AD%E9%87%8F"><span class="toc-number">4.2.1.</span> <span class="toc-text">3.2.1第一类边界条件下单层圆筒壁稳态导热量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2%E7%AC%AC%E4%B8%89%E7%B1%BB%E8%BE%B9%E7%95%8C%E6%9D%A1%E4%BB%B6%E4%B8%8B%E5%8D%95%E5%B1%82%E5%9C%86%E7%AD%92%E5%A3%81%E7%A8%B3%E6%80%81%E5%AF%BC%E7%83%AD%E9%87%8F"><span class="toc-number">4.2.2.</span> <span class="toc-text">3.2.2第三类边界条件下单层圆筒壁稳态导热量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-3%E7%AC%AC%E4%B8%80%E3%80%81%E4%B8%89%E7%B1%BB%E8%BE%B9%E7%95%8C%E6%9D%A1%E4%BB%B6%E4%B8%8Bn%E5%B1%82%E5%9C%86%E7%AD%92%E5%A3%81%E7%A8%B3%E6%80%81%E5%AF%BC%E7%83%AD%E9%87%8F"><span class="toc-number">4.2.3.</span> <span class="toc-text">3.2.3第一、三类边界条件下n层圆筒壁稳态导热量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98-4"><span class="toc-number">4.3.</span> <span class="toc-text">例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E9%9D%9E%E7%A8%B3%E6%80%81%E5%AF%BC%E7%83%AD"><span class="toc-number">5.</span> <span class="toc-text">第四章 非稳态导热</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">5.1.</span> <span class="toc-text">4.1 基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-1-%E5%AE%9A%E4%B9%89%E5%8F%8A%E5%88%86%E7%B1%BB"><span class="toc-number">5.1.1.</span> <span class="toc-text">4.1.1 定义及分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-2-%E4%B8%8D%E5%90%8C%E9%98%B6%E6%AE%B5"><span class="toc-number">5.1.2.</span> <span class="toc-text">4.1.2 不同阶段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-3"><span class="toc-number">5.1.3.</span> <span class="toc-text">4.1.3</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Bi%E6%95%B0"><span class="toc-number">5.1.3.1.</span> <span class="toc-text">&#x3D;&#x3D;Bi数&#x3D;&#x3D;</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-%E9%9B%B6%E7%BB%B4%E9%97%AE%E9%A2%98%E7%9A%84%E9%9B%86%E6%80%BB%E5%8F%82%E6%95%B0%E6%B3%95"><span class="toc-number">5.2.</span> <span class="toc-text">4.2 零维问题的集总参数法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-1-%E9%9B%86%E6%80%BB%E5%8F%82%E6%95%B0%E6%B3%95%E6%B8%A9%E5%BA%A6%E5%9C%BA%E5%88%86%E6%9E%90%E8%A7%A3"><span class="toc-number">5.2.1.</span> <span class="toc-text">4.2.1 集总参数法温度场分析解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-2-%E5%AF%BC%E7%83%AD%E9%87%8F%E8%AE%A1%E7%AE%97%E5%BC%8F%E3%80%81%E6%97%B6%E9%97%B4%E5%B8%B8%E6%95%B0%E4%B8%8E%E5%82%85%E9%87%8C%E5%8F%B6%E6%95%B0"><span class="toc-number">5.2.2.</span> <span class="toc-text">4.2.2 导热量计算式、时间常数与傅里叶数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%AF%BC%E7%83%AD%E9%87%8F%E8%AE%A1%E7%AE%97%E5%BC%8F"><span class="toc-number">5.2.2.1.</span> <span class="toc-text">1. 导热量计算式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%97%B6%E9%97%B4%E5%B8%B8%E6%95%B0"><span class="toc-number">5.2.2.2.</span> <span class="toc-text">2. 时间常数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%82%85%E9%87%8C%E5%8F%B6%E6%95%B0"><span class="toc-number">5.2.2.3.</span> <span class="toc-text">3. 傅里叶数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E9%9B%86%E6%80%BB%E5%8F%82%E6%95%B0%E6%B3%95%E7%9A%84%E5%88%A4%E6%96%AD%E4%BE%9D%E6%8D%AE"><span class="toc-number">5.2.3.</span> <span class="toc-text">是否可以使用集总参数法的判断依据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98-5"><span class="toc-number">5.3.</span> <span class="toc-text">例题</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/4.html" title="Re:传热学笔记"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051847030.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="Re:传热学笔记"/></a><div class="content"><a class="title" href="/posts/4.html" title="Re:传热学笔记">Re:传热学笔记</a><time datetime="2022-09-10T16:00:00.000Z" title="发表于 2022-09-11 00:00:00">2022-09-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2.html" title="Markdown在Typora中的食用方法（未完待续）"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051856284.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="Markdown在Typora中的食用方法（未完待续）"/></a><div class="content"><a class="title" href="/posts/2.html" title="Markdown在Typora中的食用方法（未完待续）">Markdown在Typora中的食用方法（未完待续）</a><time datetime="2022-07-25T11:21:00.000Z" title="发表于 2022-07-25 19:21:00">2022-07-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3.html" title="Re:从零开始的Hexo博客搭建（待填坑）"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051858897.png" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="Re:从零开始的Hexo博客搭建（待填坑）"/></a><div class="content"><a class="title" href="/posts/3.html" title="Re:从零开始的Hexo博客搭建（待填坑）">Re:从零开始的Hexo博客搭建（待填坑）</a><time datetime="2022-07-24T15:08:00.000Z" title="发表于 2022-07-24 23:08:00">2022-07-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1.html" title="博客与博主（该模板分享者如是说）"><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/imgg/1.webp" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/img/friend_404.gif'" alt="博客与博主（该模板分享者如是说）"/></a><div class="content"><a class="title" href="/posts/1.html" title="博客与博主（该模板分享者如是说）">博客与博主（该模板分享者如是说）</a><time datetime="2021-05-27T13:00:00.000Z" title="发表于 2021-05-27 21:00:00">2021-05-27</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022  <i id="heartbeat" class="fa fas fa-heartbeat"></i> Kunzhiyi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><head><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"></head></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'mg9x28V8Ob6Cb9Ju58LOE77z-MdYXbMMI',
+      appKey: 'UvfN7f7bdyQGtfblB63jd9oY',
+      placeholder: '留下你的精彩评论！',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Valine' === 'Livere' || !true) {
+  if (true) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><script defer id="dsq-count-scr" src="//xianqi.disqus.com/count.js" async></script><script defer type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/js/sakura.js"></script><script defer type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/js/animate.js"></script><div class="aplayer no-destroy" data-id="8237516596" data-server="tencent" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="auto" data-autoplay="true" muted></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script>window.$crisp = [];
+window.CRISP_WEBSITE_ID = "e5aee927-10c9-41df-a571-3e063243e516";
+(function () {
+  d = document;
+  s = d.createElement("script");
+  s.src = "https://client.crisp.chat/l.js";
+  s.async = 1;
+  d.getElementsByTagName("head")[0].appendChild(s);
+})();
+$crisp.push(["safe", true])
+
+if (false) {
+  $crisp.push(["do", "chat:hide"])
+  $crisp.push(["on", "chat:closed", function() {
+    $crisp.push(["do", "chat:hide"])
+  }])
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      $crisp.push(["do", "chat:show"])
+      $crisp.push(["do", "chat:open"])
+
+    });
+  }
+  chatBtnFn()
+} else {
+  if (false) {
+    function chatBtnHide () {
+      $crisp.push(["do", "chat:hide"])
+    }
+    function chatBtnShow () {
+      $crisp.push(["do", "chat:show"])
+    }
+  }
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (true) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":130,"height":400},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
