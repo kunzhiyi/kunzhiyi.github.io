@@ -9,13 +9,6 @@
   </url>
   
   <url>
-    <loc>https://kunzhiyi.github.io/posts/0.html</loc>
-    
-    <lastmod>2022-09-26</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kunzhiyi.github.io/posts/4.html</loc>
     
     <lastmod>2022-09-26</lastmod>
@@ -172,13 +165,6 @@
   </url>
   
   <url>
-    <loc>https://kunzhiyi.github.io/tags/TO-DO-LIST/</loc>
-    <lastmod>2022-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kunzhiyi.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -187,6 +173,13 @@
   
   <url>
     <loc>https://kunzhiyi.github.io/tags/%E4%BC%A0%E7%83%AD%E5%AD%A6/</loc>
+    <lastmod>2022-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kunzhiyi.github.io/tags/%E4%BB%A3%E5%8A%9E/</loc>
     <lastmod>2022-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -209,13 +202,6 @@
   </url>
   
   <url>
-    <loc>https://kunzhiyi.github.io/categories/TO-DO-LIST/</loc>
-    <lastmod>2022-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kunzhiyi.github.io/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/markdown/</loc>
     <lastmod>2022-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -231,6 +217,13 @@
   
   <url>
     <loc>https://kunzhiyi.github.io/categories/%E7%AC%94%E8%AE%B0/%E4%BC%A0%E7%83%AD%E5%AD%A6/</loc>
+    <lastmod>2022-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kunzhiyi.github.io/categories/%E4%BB%A3%E5%8A%9E/</loc>
     <lastmod>2022-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
