@@ -4,7 +4,32 @@
   
     
     <entry>
-      <title>Re:传热学笔记</title>
+      <title>Chrome浏览器解决无法使用谷歌翻译的方法</title>
+      <link href="/posts/6.html"/>
+      <url>/posts/6.html</url>
+      
+        <content type="html"><![CDATA[<p>谷歌关闭了中国的“谷歌翻译”服务，导致内地使用chrome浏览器的用户无法访问到谷歌翻译的服务器（即使使用翻墙软件好像也不行）。不过目前使用如下方法即可解决。</p><h2 id="Step1"><a href="#Step1" class="headerlink" title="Step1"></a>Step1</h2><p>以管理员身份使用记事本打开<code>C:\Windows\System32\drivers\etc\hosts</code></p><h2 id="Step2"><a href="#Step2" class="headerlink" title="Step2"></a>Step2</h2><p>复制该段文本并在文末添加</p><pre class="line-numbers language-none"><code class="language-none">203.208.40.66 translate.google.com203.208.40.66 translate.googleapis.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="Step3"><a href="#Step3" class="headerlink" title="Step3"></a>Step3</h2><p>win+R 打开 cmd，输入如下命令</p><pre class="line-numbers language-none"><code class="language-none">ipconfig/flushdns<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>回车运行</p><pre class="line-numbers language-none"><code class="language-none">C:\Users\Administrator&gt;ipconfig/flushdnsWindows IP 配置已成功刷新 DNS 解析缓存。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>最后重启谷歌浏览器就行了。</p><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>hosts是一个没有扩展名的系统文件，可以用记事本等工具打开，主要作用是定义IP地址和主机名的映射关系，是一个映射IP地址和主机名的规定。当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，浏览器会立即打开对应网页。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>传热学笔记</title>
       <link href="/posts/4.html"/>
       <url>/posts/4.html</url>
       
@@ -33,7 +58,7 @@
     
     
     <entry>
-      <title>代办</title>
+      <title>TO DO LIST</title>
       <link href="/posts/5.html"/>
       <url>/posts/5.html</url>
       
