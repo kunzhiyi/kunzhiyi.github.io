@@ -5,6 +5,35 @@
     
     <entry>
       <title>自动控制笔记</title>
+      <link href="/posts/8.html"/>
+      <url>/posts/8.html</url>
+      
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="(*꒦ິ⌓꒦ີ) 这个密码看着不太对, 请再试试！" data-whm="∑(✘Д✘๑) 这个文章不能被校验, 不过您还是能看看解密后的内容!d打賞">  <script id="hbeData" type="hbeData" data-hmacdigest="7c88fe06bcfcdd99650e905f1ecc878992fb17c03c9094b509105ecd1a14d5da">4bea00bbff110cbf435ccd9b5f67295ea7f5022c74daa8161ac3262e130741437a10308ffb30026b0000541433a64645153402915eb95dfbeda6bf9e65ab22c764eb41312214b29dbbe9eae6114a9581a9179f535cddda35e2ae2820dae4e7c31276b527736db11b27ad031b4e5465f4e8cd257a9a9070e470b6144cf8d167eb4f6c3dd8c89ea37b4770c5759f564ff7fef0358209cc6b23a14388fa152c174795770bbcafc87e6935948eaccdc3069b245caaeaed16460ec1e5b89aef1579550952acfbdbf6e1f479c542993f830b93e49c8aed8bd0441ef84c556252c3cec927f26d7f93cfe1c6dadb63378cf055ab98b8bd6d8ce078fbf002ff161e5245fb4a2696b8f55e85eb348715998d74c8718d3a652b7babc7839916256679990720dfcb1f4178e89400f0095d3d4b4a103b4fc657918ed6d62f7e4927a20176420691cdcd5359e9a06937d98b8e05215c7ce3c81329fab335e350dd931dee69f76420c2d26194813b1aac0c22983eeb32c5ca4d4bf8b2229d4db652faaf3fb2c16783ac7d9f1fc7592abfa8cb1dbc14b7b4f9a35a0a16b43a189c99c8cb4131d20d6728961a7cc825fe0a1baefb417e4d574cf37c9e04f122ccc9e34d37ae1ebef44b38ce9bd1b08931c4c69ab46f21b68cefcd762da6acba8885a66f4bbc1786d2811a730294b4c03d5543f84688afc6e54ab6851489726861ad97d3ba5a5087c3fd90b2530de9f98483263214a950fdeada0601fda9cbb9e67aa1898ba6df275094c576af380e24daaace240c33180844e132d8eaf6d348c64f8f9384b7dee56898ee5da5404268d53c30fb16a3350184cd8cd0a9f500c05cba7ddcd8c4542db9939a2438754073a51c0f023bfac5a9b7a44e5ef50a6ba2fa1b5e200e2ecb07b64c16e6f90c0fc2863b1cd350099799ef93804360e19ac97e1ac2c9f516a5530d4eb08a4e4f629bb70553603644e4098654cdb7de1882439fb47f1f6150e9c39c4fe1fa8b4c65f42c7967060d4d43807177f34e141e203876026c1138f0fd088e86a96d1093f38331ca330393ca39771fde494be308f15e7b84cd50fbdf4f554ecfd5ea5e978799fcf22d38d5bc09ca0de2c405bd789bb2b6bad39f3d3204cdfa93b3b0acf39ebf2a8db86c9af207147f89fab13bfb3a5f90a2e04ccfb901ef4a7ad3420847feb78611648398d51310460ddfdae914dc918148f4bfc33a56576b</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">✧(◍˃̶ᗜ˂̶◍)✩查看需要密码呢！请在这里输入密码！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> 机械设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+            <tag> 传热学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>自动控制笔记</title>
       <link href="/posts/7.html"/>
       <url>/posts/7.html</url>
       
@@ -24,7 +53,7 @@
             
             <tag> 笔记 </tag>
             
-            <tag> 传热学 </tag>
+            <tag> 自动控制 </tag>
             
         </tags>
       
