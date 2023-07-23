@@ -13,12 +13,16 @@
       
       <categories>
           
+          <category> 生活小知识 </category>
+          
           <category> 痤疮 </category>
           
       </categories>
       
       
         <tags>
+            
+            <tag> 疾病 </tag>
             
             <tag> 痤疮 </tag>
             
@@ -29,7 +33,7 @@
     
     
     <entry>
-      <title>汽车理论（第六版）部分课后习题</title>
+      <title>痤疮</title>
       <link href="/posts/10.html"/>
       <url>/posts/10.html</url>
       
@@ -47,9 +51,9 @@
       
         <tags>
             
-            <tag> 痤疮 </tag>
-            
             <tag> 疾病 </tag>
+            
+            <tag> 痤疮 </tag>
             
         </tags>
       
