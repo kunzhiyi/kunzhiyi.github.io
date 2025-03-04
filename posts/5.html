@@ -1,0 +1,816 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>汽车理论 | Kunzhiyi's Blog</title><meta name="author" content="Kunzhiyi"><meta name="copyright" content="Kunzhiyi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第一章1.3驱动力与行驶阻力平衡图代码： %输入原始参数 n&#x3D;600:4000 i0&#x3D;5.83,nT&#x3D;0.85,r&#x3D;0.367,CDA&#x3D;2.77,f&#x3D;0.013,W&#x3D;38024,nT&#x3D;0.85 ig&#x3D;[6.09 3.09 1.71 1.00] %for循环绘制驱动力与行驶阻力平衡图 for i &#x3D; 1:4   Ttq&#x3D;-19.313+(295.7*n&#x2F;1000)-(165.44*n.^2&#x2F;(100">
+<meta property="og:type" content="article">
+<meta property="og:title" content="汽车理论">
+<meta property="og:url" content="https://kunzhiyi.github.io/posts/5.html">
+<meta property="og:site_name" content="Kunzhiyi&#39;s Blog">
+<meta property="og:description" content="第一章1.3驱动力与行驶阻力平衡图代码： %输入原始参数 n&#x3D;600:4000 i0&#x3D;5.83,nT&#x3D;0.85,r&#x3D;0.367,CDA&#x3D;2.77,f&#x3D;0.013,W&#x3D;38024,nT&#x3D;0.85 ig&#x3D;[6.09 3.09 1.71 1.00] %for循环绘制驱动力与行驶阻力平衡图 for i &#x3D; 1:4   Ttq&#x3D;-19.313+(295.7*n&#x2F;1000)-(165.44*n.^2&#x2F;(100">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202303220119663.jpg">
+<meta property="article:published_time" content="2023-06-23T15:08:00.000Z">
+<meta property="article:modified_time" content="2025-03-04T13:41:22.013Z">
+<meta property="article:author" content="Kunzhiyi">
+<meta property="article:tag" content="汽车理论">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202303220119663.jpg"><link rel="shortcut icon" href="https://s3.bmp.ovh/imgs/2022/07/20/31ae5a282863217a.jpg"><link rel="canonical" href="https://kunzhiyi.github.io/posts/5.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//static.cloudflareinsights.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-6843303243916412',
+  enable_page_level_ads: 'true'
+});</script><script defer="defer" data-pjax="data-pjax" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;ac8e9ce2bdaf43b983e94c02e13e3551&quot;}"></script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":3,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"一年之内的产物","messageNext":"技术可能存在过期"},
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '汽车理论',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-03-04 21:41:22'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link defer rel="stylesheet" href="/css/customm.css" ><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/icon.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/background.css"><link defer rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/css/index_ee.css"><link rel="stylesheet" href="/css/transpancy.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s3.bmp.ovh/imgs/2022/07/20/fdacceae8aa2b7ff.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/CV/"><i class="fa-fw fa fa-user-tie"></i><span> 简历</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时轴归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202303220119663.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Kunzhiyi's Blog"><span class="site-name">Kunzhiyi's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/CV/"><i class="fa-fw fa fa-user-tie"></i><span> 简历</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-archive"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时轴归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-heartbeat"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/List/gallery/"><i class="fa-fw fa fa-image"></i><span> 相册</span></a></li><li><a class="site-page child" href="/List/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">汽车理论</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-23T15:08:00.000Z" title="发表于 2023-06-23 23:08:00">2023-06-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-04T13:41:22.013Z" title="更新于 2025-03-04 21:41:22">2025-03-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>20分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="汽车理论"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h2 id="1-3"><a href="#1-3" class="headerlink" title="1.3"></a>1.3</h2><h3 id="驱动力与行驶阻力平衡图"><a href="#驱动力与行驶阻力平衡图" class="headerlink" title="驱动力与行驶阻力平衡图"></a>驱动力与行驶阻力平衡图</h3><p>代码：</p>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token comment">%输入原始参数</span>
+n<span class="token operator">=</span><span class="token number">600</span><span class="token operator">:</span><span class="token number">4000</span>
+i0<span class="token operator">=</span><span class="token number">5.83</span><span class="token punctuation">,</span>nT<span class="token operator">=</span><span class="token number">0.85</span><span class="token punctuation">,</span>r<span class="token operator">=</span><span class="token number">0.367</span><span class="token punctuation">,</span>CDA<span class="token operator">=</span><span class="token number">2.77</span><span class="token punctuation">,</span>f<span class="token operator">=</span><span class="token number">0.013</span><span class="token punctuation">,</span>W<span class="token operator">=</span><span class="token number">38024</span><span class="token punctuation">,</span>nT<span class="token operator">=</span><span class="token number">0.85</span>
+ig<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">6.09</span> <span class="token number">3.09</span> <span class="token number">1.71</span> <span class="token number">1.00</span><span class="token punctuation">]</span>
+<span class="token comment">%for循环绘制驱动力与行驶阻力平衡图</span>
+<span class="token keyword">for</span> <span class="token number">i</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">:</span><span class="token number">4</span>
+  Ttq<span class="token operator">=</span><span class="token operator">-</span><span class="token number">19.313</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token number">295.7</span><span class="token operator">*</span>n<span class="token operator">/</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token punctuation">(</span><span class="token number">165.44</span><span class="token operator">*</span>n<span class="token operator">.^</span><span class="token number">2</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">1000.</span><span class="token operator">^</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token number">40.874</span><span class="token operator">*</span>n<span class="token operator">.^</span><span class="token number">3</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">1000.</span><span class="token operator">^</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token punctuation">(</span><span class="token number">3.8445</span><span class="token operator">*</span>n<span class="token operator">.^</span><span class="token number">4</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">1000.</span><span class="token operator">^</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  ua<span class="token operator">=</span><span class="token number">0.377</span><span class="token operator">.*</span>r<span class="token operator">.*</span>n<span class="token operator">/</span><span class="token function">ig</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">i</span><span class="token punctuation">)</span><span class="token operator">/</span>i0<span class="token punctuation">;</span>
+  Ft<span class="token operator">=</span><span class="token punctuation">(</span>Ttq<span class="token operator">*</span><span class="token function">ig</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">i</span><span class="token punctuation">)</span><span class="token operator">*</span>i0<span class="token operator">*</span>nT<span class="token punctuation">)</span><span class="token operator">/</span>r<span class="token punctuation">;</span>
+  Fw<span class="token operator">=</span>CDA<span class="token operator">/</span><span class="token number">21.15</span><span class="token operator">*</span>ua<span class="token operator">.^</span><span class="token number">2</span><span class="token punctuation">;</span>
+  Ff<span class="token operator">=</span>W<span class="token operator">*</span>f<span class="token punctuation">;</span>
+  F<span class="token operator">=</span>Fw<span class="token operator">+</span>Ff<span class="token punctuation">;</span>
+  <span class="token function">plot</span><span class="token punctuation">(</span>ua<span class="token punctuation">,</span>Ft<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  hold on<span class="token punctuation">;</span>
+  grid on<span class="token punctuation">;</span>
+  <span class="token function">plot</span><span class="token punctuation">(</span>ua<span class="token punctuation">,</span>F<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">xlabel</span> <span class="token punctuation">(</span><span class="token string">'ua/(km/h)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">ylabel</span><span class="token punctuation">(</span><span class="token string">'Ft/N'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">end</span>
+uamax <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>ua<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>驱动力与行驶阻力平衡图：</p>
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232209569.png"></p>
+<h3 id="汽车最高车速"><a href="#汽车最高车速" class="headerlink" title="汽车最高车速"></a>汽车最高车速</h3><p>见上图标记点，代码同上：</p>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">uamax <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>ua<span class="token punctuation">)</span>
+uamax <span class="token operator">=</span>
+  <span class="token number">94.9290</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="最大爬坡度"><a href="#最大爬坡度" class="headerlink" title="最大爬坡度"></a>最大爬坡度</h3><p>代码：</p>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">n<span class="token operator">=</span><span class="token number">600</span><span class="token operator">:</span><span class="token number">4000</span>
+i0<span class="token operator">=</span><span class="token number">5.83</span><span class="token punctuation">,</span>nT<span class="token operator">=</span><span class="token number">0.85</span><span class="token punctuation">,</span>r<span class="token operator">=</span><span class="token number">0.367</span><span class="token punctuation">,</span>CDA<span class="token operator">=</span><span class="token number">2.77</span><span class="token punctuation">,</span>f<span class="token operator">=</span><span class="token number">0.013</span><span class="token punctuation">,</span>W<span class="token operator">=</span><span class="token number">38024</span><span class="token punctuation">,</span>nT<span class="token operator">=</span><span class="token number">0.85</span>
+ig<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">6.09</span> <span class="token number">3.09</span> <span class="token number">1.71</span> <span class="token number">1.00</span><span class="token punctuation">]</span>
+<span class="token comment">%由于一档时爬坡率最大，令ig取一档值</span>
+<span class="token number">i</span><span class="token operator">=</span><span class="token number">1</span>
+Ttq<span class="token operator">=</span><span class="token operator">-</span><span class="token number">19.313</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token number">295.7</span><span class="token operator">*</span>n<span class="token operator">/</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token punctuation">(</span><span class="token number">165.44</span><span class="token operator">*</span>n<span class="token operator">.^</span><span class="token number">2</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">1000.</span><span class="token operator">^</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token number">40.874</span><span class="token operator">*</span>n<span class="token operator">.^</span><span class="token number">3</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">1000.</span><span class="token operator">^</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token punctuation">(</span><span class="token number">3.8445</span><span class="token operator">*</span>n<span class="token operator">.^</span><span class="token number">4</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">1000.</span><span class="token operator">^</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ua<span class="token operator">=</span><span class="token number">0.377</span><span class="token operator">.*</span>r<span class="token operator">.*</span>n<span class="token operator">/</span><span class="token function">ig</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">i</span><span class="token punctuation">)</span><span class="token operator">/</span>i0<span class="token punctuation">;</span>
+Ft<span class="token operator">=</span><span class="token punctuation">(</span>Ttq<span class="token operator">*</span><span class="token function">ig</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">i</span><span class="token punctuation">)</span><span class="token operator">*</span>i0<span class="token operator">*</span>nT<span class="token punctuation">)</span><span class="token operator">/</span>r<span class="token punctuation">;</span>
+Fw<span class="token operator">=</span>CDA<span class="token operator">/</span><span class="token number">21.15</span><span class="token operator">*</span>ua<span class="token operator">.^</span><span class="token number">2</span><span class="token punctuation">;</span>
+Ff<span class="token operator">=</span>W<span class="token operator">*</span>f<span class="token punctuation">;</span>
+F<span class="token operator">=</span>Fw<span class="token operator">+</span>Ff<span class="token punctuation">;</span>
+<span class="token comment">%绘制爬坡率与速度关系图，求得最大爬坡率 !此处因坡度较大不可约等</span>
+a<span class="token operator">=</span><span class="token function">asin</span><span class="token punctuation">(</span><span class="token punctuation">(</span>Ft<span class="token operator">-</span>Ff<span class="token operator">-</span>Fw<span class="token punctuation">)</span><span class="token operator">/</span>W<span class="token punctuation">)</span><span class="token punctuation">;</span>
+I<span class="token operator">=</span><span class="token function">tan</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Imax<span class="token operator">=</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token function">tan</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">plot</span><span class="token punctuation">(</span>ua<span class="token punctuation">,</span>I<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">xlabel</span> <span class="token punctuation">(</span><span class="token string">'ua/(km/h)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">ylabel</span><span class="token punctuation">(</span><span class="token string">'i/%'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>结果</p>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">Imax <span class="token operator">=</span>
+
+  <span class="token number">0.394619999376042</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="爬坡率与速度关系图："><a href="#爬坡率与速度关系图：" class="headerlink" title="爬坡率与速度关系图："></a>爬坡率与速度关系图：</h3><p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232212054.png"></p>
+<h3 id="克服该坡度时相应的爬坡率"><a href="#克服该坡度时相应的爬坡率" class="headerlink" title="克服该坡度时相应的爬坡率"></a>克服该坡度时相应的爬坡率</h3><p>代码：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">%输入原始参数
+n&#x3D;600:4000
+i0&#x3D;5.83,nT&#x3D;0.85,r&#x3D;0.367,CDA&#x3D;2.77,f&#x3D;0.013,W&#x3D;38024,nT&#x3D;0.85,a&#x3D;1.947,hg&#x3D;0.9,L&#x3D;3.2,I&#x3D;0.394619999376042;
+ig&#x3D;[6.09 3.09 1.71 1.00]
+%一般货车为后轮驱动,且克服最大坡度时可忽略空气阻力及加速阻力
+phi2&#x3D;I&#x2F;(a&#x2F;L+hg*I&#x2F;L)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>结果：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">Cvarphi2 &#x3D;
+
+  0.5485<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="汽车行驶加速度倒数曲线图"><a href="#汽车行驶加速度倒数曲线图" class="headerlink" title="汽车行驶加速度倒数曲线图"></a>汽车行驶加速度倒数曲线图</h3><p>代码：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">clear all;
+%输入原始参数
+n&#x3D;600:4000
+i0&#x3D;5.83,nT&#x3D;0.85,r&#x3D;0.367,CDA&#x3D;2.77,f&#x3D;0.013,m&#x3D;3880,W&#x3D;38024,nT&#x3D;0.85,a&#x3D;1.947,hg&#x3D;0.9,L&#x3D;3.2,Iw1&#x3D;1.798,Iw2&#x3D;3.598,If&#x3D;0.218;
+ig&#x3D;[6.09 3.09 1.71 1.00]
+%for循环绘制驱动力与行驶阻力平衡图
+for i &#x3D; 1:4
+Ttq&#x3D;-19.313+(295.7*n&#x2F;1000)-(165.44*n.^2&#x2F;(1000.^2))+(40.874*n.^3&#x2F;(1000.^3))-(3.8445*n.^4&#x2F;(1000.^4));
+ua&#x3D;0.377.*r.*n&#x2F;ig(1,i)&#x2F;i0;
+Ft&#x3D;(Ttq*ig(1,i)*i0*nT)&#x2F;r;
+Fw&#x3D;CDA&#x2F;21.15*ua.^2;
+Ff&#x3D;W*f;
+delta&#x3D;1+(Iw1+Iw2)&#x2F;(m*r^2)+If*ig(1,i).^2*i0^2*nT&#x2F;(m*r^2);
+alpha&#x3D;(Ft-Ff-Fw)&#x2F;(delta*m);
+alpha1&#x3D;alpha;
+alpha2&#x3D;alpha~&#x3D;0;
+alpha3&#x3D;1.&#x2F;alpha(alpha2)
+alpha1(alpha2)&#x3D;alpha3;
+plot(ua,alpha1);
+hold on;
+grid on;
+xlabel (&#39;ua&#x2F;(km&#x2F;h)&#39;);
+ylabel(&#39;a&#x2F;(m&#x2F;s^2)&#39;);
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232222199.png"></p>
+<h3 id="汽车二档起步加速至70km-h的时间"><a href="#汽车二档起步加速至70km-h的时间" class="headerlink" title="汽车二档起步加速至70km&#x2F;h的时间"></a>汽车二档起步加速至70km&#x2F;h的时间</h3><p>代码：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">clear all;
+%输入原始参数
+n&#x3D;600:4000;
+i0&#x3D;5.83,nT&#x3D;0.85,r&#x3D;0.367,CDA&#x3D;2.77,f&#x3D;0.013,m&#x3D;3880,W&#x3D;38024,nT&#x3D;0.85,a&#x3D;1.947,hg&#x3D;0.9,L&#x3D;3.2,Iw1&#x3D;1.798,Iw2&#x3D;3.598,If&#x3D;0.218;
+ig&#x3D;[6.09 3.09 1.71 1.00];
+%计算汽车二档起步加速至70km&#x2F;h的时间
+for i &#x3D; 1:4
+Ttq&#x3D;-19.313+(295.7*n&#x2F;1000)-(165.44*n.^2&#x2F;(1000.^2))+(40.874*n.^3&#x2F;(1000.^3))-(3.8445*n.^4&#x2F;(1000.^4));
+ua&#x3D;0.377.*r.*n&#x2F;ig(1,i)&#x2F;i0;
+Ft&#x3D;(Ttq*ig(1,i)*i0*nT)&#x2F;r;
+Fw&#x3D;CDA&#x2F;21.15*ua.^2;
+Ff&#x3D;W*f;
+delta&#x3D;1+(Iw1+Iw2)&#x2F;(m*r^2)+If*ig(1,i).^2*i0^2*nT&#x2F;(m*r^2);
+alpha&#x3D;(Ft-Ff-Fw)&#x2F;(delta*m);
+alpha1&#x3D;alpha;
+alpha2&#x3D;alpha~&#x3D;0;
+alpha3&#x3D;1.&#x2F;alpha(alpha2);
+alpha1(alpha2)&#x3D;alpha3;
+
+if i &#x3D;&#x3D; 2
+ua2max &#x3D; max(ua);
+t2 &#x3D; trapz(ua.&#x2F;3.6,alpha1);
+end
+
+if i &#x3D;&#x3D; 3
+ua3max &#x3D; max(ua);
+n3min &#x3D; round(ua2max&#x2F;2&#x2F;pi*60*ig(1,3)*i0&#x2F;r*1000&#x2F;3600);
+t3&#x3D;trapz(ua((n3min-600):3400).&#x2F;3.6,alpha1((n3min-600):3400));
+end
+
+if i &#x3D;&#x3D; 4
+ua4max &#x3D; max(ua);
+n4min &#x3D; round(ua3max&#x2F;2&#x2F;pi*60*ig(1,4)*i0&#x2F;r*1000&#x2F;3600);
+n4max &#x3D; round(70&#x2F;2&#x2F;pi*60*ig(1,4)*i0&#x2F;r*1000&#x2F;3600);
+t4&#x3D;trapz(ua((n4min-600):n4max).&#x2F;3.6,alpha1((n4min-600):n4max));
+end
+
+end
+%输出总时间
+T &#x3D; t2 + t3 + t4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<p>结果：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">T &#x3D;
+ 42.1203<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232224322.png"></p>
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232224193.png"></p>
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232224983.png"></p>
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232224965.png"></p>
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232224726.png"></p>
+<h1 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h1><h2 id="2-7"><a href="#2-7" class="headerlink" title="2.7"></a>2.7</h2><h3 id="2-7-1"><a href="#2-7-1" class="headerlink" title="2.7.1"></a>2.7.1</h3><p>代码：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">clear all;
+%输入原始参数
+n&#x3D;600:4500
+i0&#x3D;5.83,nT&#x3D;0.85,r&#x3D;0.367,CDA&#x3D;2.77,f&#x3D;0.013,W&#x3D;38024,nT&#x3D;0.85
+ig&#x3D;[6.09 3.09 1.71 1.00]
+%绘制功率平衡图
+for i &#x3D; 1:4
+Ttq&#x3D;-19.313+(295.7*n&#x2F;1000)-(165.44*n.^2&#x2F;(1000.^2))+(40.874*n.^3&#x2F;(1000.^3))-(3.8445*n.^4&#x2F;(1000.^4));
+ua&#x3D;0.377.*r.*n&#x2F;ig(1,i)&#x2F;i0;
+Pe&#x3D;n.*Ttq.&#x2F;9550;
+Fw&#x3D;CDA&#x2F;21.15*ua.^2;
+Ff&#x3D;W*f;
+F&#x3D;Fw+Ff;
+Pf&#x3D;F.*ua.&#x2F;nT&#x2F;3600
+plot(ua,Pe);
+hold on;
+grid on;
+plot(ua,Pf);
+xlabel (&#39;ua&#x2F;(km&#x2F;h)&#39;);
+ylabel(&#39;Pe&#x2F;kW&#39;);
+title(&#39;汽车功率平衡图&#39;)
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232225265.png"></p>
+<h3 id="2-7-2"><a href="#2-7-2" class="headerlink" title="2.7.2"></a>2.7.2</h3><p>代码：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">clear all;
+%输入原始参数
+n&#x3D;[815 1207 1614 2012 2603 3006 3403 3804]
+i0&#x3D;5.83,nT&#x3D;0.85,r&#x3D;0.367,CDA&#x3D;2.77,f&#x3D;0.013,W&#x3D;38024,nT&#x3D;0.85,rho&#x3D;0.725,g&#x3D;9.8
+ig&#x3D;[6.09 3.09 1.71 1.00]
+N&#x3D;600:4000;
+for j&#x3D;3:4 %计算第三第四档下的数据
+for i&#x3D;1:8
+ua&#x3D;0.377*r.*n(1,i).&#x2F;i0.&#x2F;ig(1,j)
+Ttq&#x3D;-19.313+(295.7*n(1,i).&#x2F;1000)-(165.44*n(1,i).^2&#x2F;(1000.^2))+(40.874*n(1,i).^3&#x2F;(1000.^3))-(3.8445*n(1,i).^4&#x2F;(1000.^4));
+Fw&#x3D;CDA&#x2F;21.15*ua.^2;
+Ff&#x3D;W*f;
+F&#x3D;Fw+Ff;
+Pf&#x3D;F.*ua.&#x2F;nT&#x2F;3600
+B0&#x3D;[1326.8,1354.7,1284.4,1122.9 1141,1051.2,1233.9,1129.7]
+B1&#x3D;[-416.46,-303.98,-189.75,-121.59,-98.893,-73.714,-84.478,-45.291]
+B2&#x3D;[72.379 36.657 14.524 7.0035 4.4763 2.8593 2.9788 0.71113]
+B3&#x3D;[-5.8629 -2.0553 -0.51184 -0.18527 -0.091077 -0.05138 -0.047449 -0.00075215]
+B4&#x3D;[0.17768 0.043072 0.0068164 0.0018555 0.00068906 0.00035032 0.0002823 -0.000038568]
+b&#x3D;B0(1,i)+B1(1,i).*Pf+B2(1,i).*Pf.^2+B3(1,i).*Pf.^3+B4(1,i).*Pf.^4
+B(1,i)&#x3D;b
+Qs(1,i)&#x3D;Pf.*b.&#x2F;(1.02.*ua.*rho*g)
+U(1,i)&#x3D;ua
+end
+figure(1)
+yb&#x3D;polyfit(n,B,5);
+yB&#x3D;polyval(yb,N);
+plot(n,B,&#39;bo&#39;);
+hold on;
+plot(N,yB)
+title(&#39;燃油消耗率曲线&#39;)
+xlabel (&#39;n&#x2F;(r&#x2F;min)&#39;);
+ylabel(&#39;b&#x2F;(kW&#x2F;h)&#39;);
+
+figure(2)
+ua&#x3D;0.377.*r.*N&#x2F;ig(1,j)&#x2F;i0;
+Fw&#x3D;CDA&#x2F;21.15*ua.^2;
+Ff&#x3D;W*f;
+F&#x3D;Fw+Ff;
+Pf&#x3D;F.*ua.&#x2F;nT&#x2F;3600
+Qs&#x3D;Pf.*yB.&#x2F;(1.02.*ua.*rho*g)
+plot(ua,Qs);
+hold on;
+grid on;
+title(&#39;等速百公里油耗曲线&#39;)
+xlabel (&#39;ua&#x2F;(km&#x2F;h)&#39;);
+ylabel(&#39;Qs&#x2F;(L)&#39;);
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232226614.png"></p>
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232226580.png"></p>
+<h1 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h1><p>代码：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">clear all;
+%输入原始参数
+n&#x3D;600:4000;
+i0&#x3D;[5.17 5.43 5.83 6.17 6.33],nT&#x3D;0.85,r&#x3D;0.367,CDA&#x3D;2.77,f&#x3D;0.013,m&#x3D;3880,W&#x3D;38024,nT&#x3D;0.85,a&#x3D;1.947,hg&#x3D;0.9,L&#x3D;3.2,Iw1&#x3D;1.798,Iw2&#x3D;3.598,If&#x3D;0.218;
+ig&#x3D;[6.09 3.09 1.71 1.00];
+%计算各主减速器传动比下汽车二档起步加速至70km&#x2F;h的时间
+for j &#x3D; 1:5
+for i &#x3D; 1:4
+Ttq&#x3D;-19.313+(295.7*n&#x2F;1000)-(165.44*n.^2&#x2F;(1000.^2))+(40.874*n.^3&#x2F;(1000.^3))-(3.8445*n.^4&#x2F;(1000.^4));
+ua&#x3D;0.377.*r.*n&#x2F;ig(1,i).&#x2F;i0(1,j);
+Ft&#x3D;(Ttq*ig(1,i).*i0(1,j).*nT)&#x2F;r;
+Fw&#x3D;CDA&#x2F;21.15*ua.^2;
+Ff&#x3D;W*f;
+delta&#x3D;1+(Iw1+Iw2)&#x2F;(m*r^2)+If*ig(1,i).^2.*i0(1,j).^2*nT&#x2F;(m*r^2);
+alpha&#x3D;(Ft-Ff-Fw)&#x2F;(delta*m);
+alpha1&#x3D;alpha;
+alpha2&#x3D;alpha~&#x3D;0;
+alpha3&#x3D;1.&#x2F;alpha(alpha2);
+alpha1(alpha2)&#x3D;alpha3;
+if i &#x3D;&#x3D; 2
+t0 &#x3D; ua(1).*alpha1(1);
+ua2max &#x3D; max(ua);
+t2 &#x3D; trapz(ua.&#x2F;3.6,alpha1);
+end
+if i &#x3D;&#x3D; 3
+ua3max &#x3D; max(ua);
+n3min &#x3D; round(ua2max&#x2F;2&#x2F;pi*60*ig(1,3).*i0(1,j)&#x2F;r*1000&#x2F;3600);
+t3&#x3D;trapz(ua((n3min-600):3400).&#x2F;3.6,alpha1((n3min-600):3400));
+end
+if i &#x3D;&#x3D; 4
+ua4max &#x3D; max(ua);
+n4min &#x3D; round(ua3max&#x2F;2&#x2F;pi*60*ig(1,4).*i0(1,j)&#x2F;r*1000&#x2F;3600);
+n4max &#x3D; round(70&#x2F;2&#x2F;pi*60*ig(1,4).*i0(1,j)&#x2F;r*1000&#x2F;3600);
+t4&#x3D;trapz(ua((n4min-600):n4max).&#x2F;3.6,alpha1((n4min-600):n4max));
+end
+end
+%输出总时间（时间越长动力性越差）
+T(1,j) &#x3D; t2 + t3 + t4
+end
+
+%绘制燃油经济性-加速时间曲线
+
+i0 &#x3D; [5.17 543 5.83 6.17 6.33]%主减速器传动比
+Qs &#x3D; [15.77 15.94 16.38 16.89 17.17]%燃油经济性（越大越差）
+x&#x3D;15.77:0.001:17.17
+y&#x3D;polyfit(Qs,T,3)
+Y&#x3D;polyval(y,x)
+plot(1.&#x2F;Qs,1.&#x2F;T,&#39;bo&#39;)
+hold on
+plot(1.&#x2F;x,1.&#x2F;Y)%取倒数画图
+title(&#39;燃油经济性-加速时间曲线&#39;)
+set(gca,&#39;xtick&#39;,x); 
+xlabel(&#39;燃油经济性&#39;) 
+set(gca,&#39;ytick&#39;,x);
+ylabel(&#39;动力性&#39;) <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202503042048075.jpg"></p>
+<p>结论：</p>
+<p>由图可以看出，该图曲线为c曲线。曲线表明，i0值较大时加速时间较短但油耗增多；i0值较小时，加速时间变长但燃油经济性改善。若选择i0&#x3D;5.83则能较好兼顾动力性与燃油经济性。</p>
+<h1 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h1><h2 id="4-1"><a href="#4-1" class="headerlink" title="4.1"></a>4.1</h2><p>代码：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">clear all;
+Pi&#x3D;179.27 %胎压 kPa
+U&#x3D;100 %车速 km&#x2F;h
+Uh&#x3D;6.34*Pi^0.5 %滑水车速 km&#x2F;h
+if Uh &gt; U
+fprintf(&#39;不会出现滑水现象&#39;)
+else fprintf(&#39;会出现滑水现象&#39;)
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>结果：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">Uh &#x3D;
+
+   84.8874
+   
+会出现滑水现象<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="4-2"><a href="#4-2" class="headerlink" title="4.2"></a>4.2</h2><p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232229547.png"></p>
+<h2 id="4-3"><a href="#4-3" class="headerlink" title="4.3"></a>4.3</h2><h3 id="4-3-1"><a href="#4-3-1" class="headerlink" title="4.3.1"></a>4.3.1</h3><p>代码：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">clear all;
+%输入原始参数（矩阵中列1为空载，2为满载）
+m &#x3D; [4080,9290] , hg &#x3D; [0.845,1.170] , L &#x3D; 3.950 ,
+a &#x3D; [2.100,2.950] , beta &#x3D; 0.38 ; varphi &#x3D; 0:0.01:1
+for i &#x3D; 1:2
+%前轴制动效率
+Ef &#x3D; ((L-a(1,i)).&#x2F;L).&#x2F;(beta-varphi.*hg(1,i).&#x2F;L)
+%后轴制动效率
+Er &#x3D; (a(1,i).&#x2F;L).&#x2F;((1-beta)+varphi.*hg(1,i).&#x2F;L)
+figure(1)
+ylim([0,1]) %限制Y轴范围
+plot(varphi,Er)
+hold on
+plot(varphi,Ef)
+xlabel(&#39;附着系数varphi&#39;)
+ylabel(&#39;制动效率（%）&#39;)
+title(&#39;前、后轴制动效率曲线&#39;)
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232230776.png"></p>
+<h3 id="4-3-2"><a href="#4-3-2" class="headerlink" title="4.3.2"></a>4.3.2</h3><p>代码：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">clear all;
+%输入原始参数(矩阵中列1为空载，2为满载)
+ua0 &#x3D; 30 , varphi &#x3D; 0.80 , tau21 &#x3D; 0.02 , tau22 &#x3D; 0.02 ,
+Er &#x3D; [0.672,0.8715] , g &#x3D; 9.8for i &#x3D; 1:2
+abmax &#x3D; Er(1,i).*varphi.*g
+s(1,i) &#x3D; 1&#x2F;3.6.*(tau21+(tau22&#x2F;2)).*ua0+ua0.^2&#x2F;(25.92.*abmax)
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<p>结果：</p>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">s <span class="token operator">=</span>
+
+	<span class="token number">6.8406</span>    <span class="token number">5.3319</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>即空载时不抱死的制动距离为6.84米；满载时不抱死的制动距离为5.33米。</p>
+<h3 id="4-3-3"><a href="#4-3-3" class="headerlink" title="4.3.3"></a>4.3.3</h3><p>代码：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">clear all;
+%输入原始参数（矩阵中列1为空载，2为满载）
+ua0 &#x3D; 30 , varphi &#x3D; 0.80 , tau21 &#x3D; 0.02 , tau22 &#x3D; 0.02 ,
+Er &#x3D; [0.672,0.8715] , g &#x3D; 9.8 , m &#x3D; [4080,9290] , hg &#x3D; [0.845,1.170] ,
+L &#x3D; 3.950 , a &#x3D; [2.100,2.950] , beta &#x3D; 0.38
+%制动系前部损坏
+% Fxb &#x3D; G&#x2F;L*(a-z*hg) &#x3D; G*z
+for i &#x3D; 1:2
+z &#x3D; a(1,i).*varphi.&#x2F;(L+(varphi.*hg(1,i)))
+abmax &#x3D; z*g
+s1(1,i) &#x3D; 1&#x2F;3.6.*(tau21+(tau22&#x2F;2)).*ua0+ua0.^2&#x2F;(25.92.*abmax)
+end
+
+%制动系后部损坏
+% Fxb &#x3D; G&#x2F;L*(b+z*hg) &#x3D; G*z
+for i &#x3D; 1:2
+z &#x3D; (L-a(1,i)).*varphi.&#x2F;(L-(varphi.*hg(1,i)))
+abmax &#x3D; z*g
+s2(1,i) &#x3D; 1&#x2F;3.6.*(tau21+(tau22&#x2F;2)).*ua0+ua0.^2&#x2F;(25.92.*abmax)
+end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<p>结果：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">s1 &#x3D;
+
+   10.0061    7.5854
+   
+s2 &#x3D;
+
+	8.0879   13.5986<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>即制动系前部损坏时，空载时制动距离为10.01米，满载时为7.59米；</p>
+<p>制动系后部损坏时，空载时制动距离为8.09米，满载时为13.60米。</p>
+<h2 id="4-5"><a href="#4-5" class="headerlink" title="4.5"></a>4.5</h2><p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232232965.png"></p>
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232233719.png"></p>
+<h1 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h1><h2 id="5-1-12-13-15-21"><a href="#5-1-12-13-15-21" class="headerlink" title="5.1&#x2F;12&#x2F;13&#x2F;15&#x2F;21"></a>5.1&#x2F;12&#x2F;13&#x2F;15&#x2F;21</h2><p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232233044.png"></p>
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232233297.png"></p>
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232233637.png"></p>
+<h2 id="5-11"><a href="#5-11" class="headerlink" title="5.11"></a>5.11</h2><p>代码：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">clear all;
+%输入原始参数
+m &#x3D; 1818.2 , Iz &#x3D; 3885 , L &#x3D; 3.048 , a &#x3D; 1.463 , b &#x3D; 1.585 , k1 &#x3D; -62618 ,
+k2 &#x3D; -110185 , i &#x3D; 20 ;
+%求稳定性因数K和特征车速uch
+K &#x3D; m&#x2F;(L^2)*((a&#x2F;k2)-(b&#x2F;k1))
+uch &#x3D; (1&#x2F;K)^0.5
+%绘制稳态横摆角速度增益曲线
+ua &#x3D; 1:150 %车速（km&#x2F;h）
+u &#x3D; ua.&#x2F;3.6 %车速（m&#x2F;s）
+y&#x3D;(u.&#x2F;L).&#x2F;(1+(K.*(u.^2)))
+figure(1)
+plot(ua,y)
+title(&#39;稳态横摆角速度增益曲线&#39;)
+xlabel(&#39;ua&#x2F;(km&#x2F;h)&#39;)
+ylabel(&#39;稳态横摆增益&#39;)
+%转向灵敏度计算
+u1 &#x3D; 22.35
+z&#x3D;((u1.&#x2F;L).&#x2F;(1+(K.*(u1.^2))))&#x2F;i
+%计算静态储备系数S.M.;计算R&#x2F;R0
+SM &#x3D; (k2&#x2F;(k1+k2))-(a&#x2F;L)
+ay &#x3D; 0.4*9.8 , R0 &#x3D; 15
+delta &#x3D; L&#x2F;R0
+R &#x3D; L&#x2F;(delta-(K*ay*L))
+X &#x3D; R&#x2F;R0
+%计算固有频率w0；阻尼比xi；反应时间tau；峰值反应时间varepsilon
+u2 &#x3D; 30.56
+w0 &#x3D; L&#x2F;u2*(k1*k2*(1+K*(u2^2))&#x2F;m&#x2F;Iz)^0.5
+xi &#x3D; (-m*((a^2)*k1+(b^2)*k2)-Iz*(k1+k2))&#x2F;(2*L*(m*Iz*k1*k2*(1+(K*(u2^2))))^0.5)
+tau &#x3D; atan(((1-(xi)^2)^0.5)&#x2F;((-w0*m*u2*a&#x2F;(L*k2))-xi))&#x2F;(w0*(1-(xi^2))^0.5)
+varepsilon &#x3D; atan(((1-(xi)^2)^0.5)&#x2F;xi)&#x2F;(w0*(1-(xi^2))^0.5)+tau<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>结果：</p>
+<p>（1）</p>
+<ul>
+<li><p>稳定性因数</p>
+<p>$$K&#x3D;0.0024s^{2}&#x2F;m^{2}$$</p>
+</li>
+<li><p>特征车速<br>$$u_{ch}&#x3D;20.6053km&#x2F;h$$</p>
+</li>
+</ul>
+<p>（2）</p>
+<ul>
+<li>转向灵敏度为<br>$$0.1685$$</li>
+</ul>
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232237583.png"></p>
+<p>（3）</p>
+<ul>
+<li><p>静态储备系数<br>$$S.M.&#x3D;0.1576$$</p>
+<p>$$R&#x2F;R_0&#x3D;1.1608$$</p>
+</li>
+</ul>
+<p>（4）</p>
+<ul>
+<li><p>固有频率</p>
+<p>$$\omega _0&#x3D;5.5758$$</p>
+</li>
+<li><p>阻尼比</p>
+<p>$$\xi &#x3D;0.5892$$</p>
+</li>
+<li><p>反应时间</p>
+<p>$$\tau&#x3D;0.1811s$$</p>
+</li>
+<li><p>峰值反应时间</p>
+<p>$$\varepsilon&#x3D;0.3899s$$</p>
+</li>
+</ul>
+<h1 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h1><h2 id="6-2"><a href="#6-2" class="headerlink" title="6.2"></a>6.2</h2><p>代码：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">clear all;
+%输入原始参数
+Gqn0 &#x3D; 2.56*10^(-8) , n0 &#x3D; 0.1 , u &#x3D; 20
+f &#x3D; 0:0.01:100
+%计算路面垂直位移Gqf，速度Gqf1,加速度Gqf2
+Gqf &#x3D; Gqn0.*(n0.^2).*u.&#x2F;(f.^2)
+Gqf1 &#x3D; ((2.*pi).^2).*Gqn0.*(n0.^2).*u
+Gqf2 &#x3D; ((2.*pi).^4).*Gqn0.*n0.^2.*u.*(f.^2)
+figure(1)
+plot(f,Gqf)
+loglog(f,Gqf) %转化为对数坐标
+title(&#39;路面垂直位移的功率谱图&#39;)
+xlabel(&#39;f(Hz)&#39;)
+ylabel(&#39;Gqf(m^2*s)&#39;)
+figure(2)
+Gqf1 &#x3D; ones(1,10001)*Gqf1
+plot(f,Gqf1)
+loglog(f,Gqf1)
+title(&#39;路面垂直速度的功率谱图&#39;)
+xlabel(&#39;f(Hz)&#39;)
+ylabel(&#39;Gqf1(m^2&#x2F;s)&#39;)
+figure(3)
+plot(f,Gqf2)
+loglog(f,Gqf2)
+title(&#39;路面垂直加速度的功率谱图&#39;)
+xlabel(&#39;f(Hz)&#39;)
+ylabel(&#39;Gqf2(m^2&#x2F;s^3)&#39;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232245606.png"></p>
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232245437.png"></p>
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232245390.png"></p>
+<h2 id="6-4"><a href="#6-4" class="headerlink" title="6.4"></a>6.4</h2><p>代码：</p>
+<pre class="line-numbers language-MATLAB" data-language="MATLAB"><code class="language-MATLAB">clear all;
+%输入原始参数
+f1 &#x3D; 0.1:0.01:1 , f2 &#x3D; 1:0.01:10
+Gzf1 &#x3D; ((2.*pi.*f1).^2).*1.*(20.213.&#x2F;(10^8))
+Gzf2 &#x3D; ((2.*pi.*f2).^2).*((1.&#x2F;f2).^2).*(20.213.&#x2F;(10^8))
+%绘制车身加速度密度谱图
+plot(f1,Gzf1)
+loglog(f1,Gzf1,&#39;b&#39;,f2,Gzf2,&#39;b&#39;)
+title(&#39;车身加速度密度谱图&#39;)
+xlabel(&#39;f(Hz)&#39;)
+ylabel(&#39;Gz(f)&#39;)
+%计算车身加速度均方根值
+syms f1 f2
+f(f1) &#x3D; (((2.*pi.*f1).^2).*1.*(20.213.&#x2F;(10^8))).^2
+a &#x3D; int(f,f1,0.1,1)
+f(f2) &#x3D; (((2.*pi.*f2).^2).*((1.&#x2F;f2).^2).*(20.213.&#x2F;(10^8))).^2
+b &#x3D; int(f,f2,1,10)
+sigmaz &#x3D; (a+b)^0.5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232246596.png"></p>
+<p>车身加速度均方根值<br>$$\sigma_2&#x3D;2.4204\times10^{-5}$$</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://kunzhiyi.github.io">Kunzhiyi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://kunzhiyi.github.io/posts/5.html">https://kunzhiyi.github.io/posts/5.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://kunzhiyi.github.io" target="_blank">Kunzhiyi's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%B1%BD%E8%BD%A6%E7%90%86%E8%AE%BA/">汽车理论</a></div><div class="post_share"><div class="social-share" data-image="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202303220119663.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051849366.jpg" target="_blank"><img class="post-qr-code-img" src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051849366.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051849640.jpg" target="_blank"><img class="post-qr-code-img" src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051849640.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/3.html" title="Markdown在Typora中的食用方法（未完待续）"><img class="cover" src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051856284.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Markdown在Typora中的食用方法（未完待续）</div></div></a></div><div class="next-post pull-right"><a href="/posts/6.html" title="痤疮治疗"><img class="cover" src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232305945.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">痤疮治疗</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s3.bmp.ovh/imgs/2022/07/20/fdacceae8aa2b7ff.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Kunzhiyi</div><div class="author-info__description">北冥有鱼，其名为鲲</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" href="https://kunzhiyi.github.io/"><i class="fab fa-home"></i><span>个人主页</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/kunzhiyi" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=1052159650&amp;website=www.qtxml.cn" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051838003.jpg" target="_blank" title=""><i class="fab fa-weixin"></i></a><a class="social-icon" href="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051838419.jpg" target="_blank" title=""><i class="fab fa-qq"></i></a><a class="social-icon" href="https://space.bilibili.com/351519433" target="_blank" title=""><i class="fas fa-brands fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Hello！This is Kunzhiyi's blog. I'm surprised that you found my secret garden! It's a small place to record my life and share technology and ideas. I hope you can find something insteresting or useful. If you have any questions or ideas want to share with me,you can contact me through the link above the announcement (Please explain your intention first!) I will reply as soon as I see it! I will be very glad to make friends with you!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="toc-number">1.</span> <span class="toc-text">第一章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3"><span class="toc-number">1.1.</span> <span class="toc-text">1.3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A9%B1%E5%8A%A8%E5%8A%9B%E4%B8%8E%E8%A1%8C%E9%A9%B6%E9%98%BB%E5%8A%9B%E5%B9%B3%E8%A1%A1%E5%9B%BE"><span class="toc-number">1.1.1.</span> <span class="toc-text">驱动力与行驶阻力平衡图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%BD%E8%BD%A6%E6%9C%80%E9%AB%98%E8%BD%A6%E9%80%9F"><span class="toc-number">1.1.2.</span> <span class="toc-text">汽车最高车速</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E7%88%AC%E5%9D%A1%E5%BA%A6"><span class="toc-number">1.1.3.</span> <span class="toc-text">最大爬坡度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%88%AC%E5%9D%A1%E7%8E%87%E4%B8%8E%E9%80%9F%E5%BA%A6%E5%85%B3%E7%B3%BB%E5%9B%BE%EF%BC%9A"><span class="toc-number">1.1.4.</span> <span class="toc-text">爬坡率与速度关系图：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%8B%E6%9C%8D%E8%AF%A5%E5%9D%A1%E5%BA%A6%E6%97%B6%E7%9B%B8%E5%BA%94%E7%9A%84%E7%88%AC%E5%9D%A1%E7%8E%87"><span class="toc-number">1.1.5.</span> <span class="toc-text">克服该坡度时相应的爬坡率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%BD%E8%BD%A6%E8%A1%8C%E9%A9%B6%E5%8A%A0%E9%80%9F%E5%BA%A6%E5%80%92%E6%95%B0%E6%9B%B2%E7%BA%BF%E5%9B%BE"><span class="toc-number">1.1.6.</span> <span class="toc-text">汽车行驶加速度倒数曲线图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%BD%E8%BD%A6%E4%BA%8C%E6%A1%A3%E8%B5%B7%E6%AD%A5%E5%8A%A0%E9%80%9F%E8%87%B370km-h%E7%9A%84%E6%97%B6%E9%97%B4"><span class="toc-number">1.1.7.</span> <span class="toc-text">汽车二档起步加速至70km&#x2F;h的时间</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="toc-number">2.</span> <span class="toc-text">第二章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-7"><span class="toc-number">2.1.</span> <span class="toc-text">2.7</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-1"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.7.1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-2"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.7.2</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0"><span class="toc-number">3.</span> <span class="toc-text">第三章</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0"><span class="toc-number">4.</span> <span class="toc-text">第四章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1"><span class="toc-number">4.1.</span> <span class="toc-text">4.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2"><span class="toc-number">4.2.</span> <span class="toc-text">4.2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3"><span class="toc-number">4.3.</span> <span class="toc-text">4.3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-1"><span class="toc-number">4.3.1.</span> <span class="toc-text">4.3.1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-2"><span class="toc-number">4.3.2.</span> <span class="toc-text">4.3.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-3"><span class="toc-number">4.3.3.</span> <span class="toc-text">4.3.3</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5"><span class="toc-number">4.4.</span> <span class="toc-text">4.5</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0"><span class="toc-number">5.</span> <span class="toc-text">第五章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-12-13-15-21"><span class="toc-number">5.1.</span> <span class="toc-text">5.1&#x2F;12&#x2F;13&#x2F;15&#x2F;21</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-11"><span class="toc-number">5.2.</span> <span class="toc-text">5.11</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0"><span class="toc-number">6.</span> <span class="toc-text">第六章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2"><span class="toc-number">6.1.</span> <span class="toc-text">6.2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4"><span class="toc-number">6.2.</span> <span class="toc-text">6.4</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/6.html" title="痤疮治疗"><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232305945.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="痤疮治疗"/></a><div class="content"><a class="title" href="/posts/6.html" title="痤疮治疗">痤疮治疗</a><time datetime="2023-07-22T15:08:00.000Z" title="发表于 2023-07-22 23:08:00">2023-07-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/5.html" title="汽车理论"><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202303220119663.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="汽车理论"/></a><div class="content"><a class="title" href="/posts/5.html" title="汽车理论">汽车理论</a><time datetime="2023-06-23T15:08:00.000Z" title="发表于 2023-06-23 23:08:00">2023-06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3.html" title="Markdown在Typora中的食用方法（未完待续）"><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202209051856284.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Markdown在Typora中的食用方法（未完待续）"/></a><div class="content"><a class="title" href="/posts/3.html" title="Markdown在Typora中的食用方法（未完待续）">Markdown在Typora中的食用方法（未完待续）</a><time datetime="2022-07-25T11:21:00.000Z" title="发表于 2022-07-25 19:21:00">2022-07-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/4.html" title="Re:从零开始的Hexo博客搭建（待填坑）"><img src="https://s3.bmp.ovh/imgs/2022/07/24/159f26f9acf87254.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Re:从零开始的Hexo博客搭建（待填坑）"/></a><div class="content"><a class="title" href="/posts/4.html" title="Re:从零开始的Hexo博客搭建（待填坑）">Re:从零开始的Hexo博客搭建（待填坑）</a><time datetime="2022-07-24T15:08:00.000Z" title="发表于 2022-07-24 23:08:00">2022-07-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1.html" title="Hello World"><img src="https://kunzhiyi.oss-cn-nanjing.aliyuncs.com/202307232327789.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/posts/1.html" title="Hello World">Hello World</a><time datetime="2022-03-22T15:08:00.000Z" title="发表于 2022-03-22 23:08:00">2022-03-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2025 By Kunzhiyi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo" title=""><img data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt="" class="entered loaded" src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" data-ll-status="loaded"></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" data-title="主题版本Butterfly" title=""><img data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt="" class="entered loaded" src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" data-ll-status="loaded"></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" data-title="本站使用JsDelivr为静态资源提供CDN加速" title=""><img data-lazy-src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt="" class="entered loaded" src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" data-ll-status="loaded"></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title=""><img data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt="" class="entered loaded" src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" data-ll-status="loaded"></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title=""><img data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt="" class="entered loaded" src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" data-ll-status="loaded"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: 'Ov23liI7BbO34H18ufpd',
+      clientSecret: '17a43354b348ee5018026825e1ec34016656d7ab',
+      repo: 'commitments',
+      owner: 'kunzhiyi',
+      admin: ['kunzhiyi'],
+      id: 'dac8879682c04047a7c8da87ee427845',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    getCSS('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css')
+    getScript('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.textContent= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script defer id="dsq-count-scr" src="//xianqi.disqus.com/count.js" async></script><script defer type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/js/sakura.js"></script><script defer type="text/javascript" src="https://cdn.jsdelivr.net/gh/zhaoze-jpg/Xianqi@main/js/animate.js"></script><div class="aplayer no-destroy" data-id="8237516596" data-server="tencent" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="auto" data-autoplay="true" muted></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script>(() => {
+  window.$crisp = [];
+  window.CRISP_WEBSITE_ID = "e5aee927-10c9-41df-a571-3e063243e516";
+  (function () {
+    d = document;
+    s = d.createElement("script");
+    s.src = "https://client.crisp.chat/l.js";
+    s.async = 1;
+    d.getElementsByTagName("head")[0].appendChild(s);
+  })();
+  $crisp.push(["safe", true])
+
+  const isChatBtn = false
+  const isChatHideShow = false
+
+  if (isChatBtn) {
+    const open = () => {
+      $crisp.push(["do", "chat:show"])
+      $crisp.push(["do", "chat:open"])
+    }
+
+    const close = () => {
+      $crisp.push(["do", "chat:hide"])
+    }
+
+    close()
+    $crisp.push(["on", "chat:closed", function() {
+      close()
+    }])
+
+    window.chatBtnFn = () => {
+      $crisp.is("chat:visible") ? close() : open()
+    }
+  } else if (isChatHideShow) {
+    window.chatBtn = {
+      hide: () => {
+        $crisp.push(["do", "chat:hide"])
+      },
+      show: () => {
+        $crisp.push(["do", "chat:show"])
+      }
+    }
+  }
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var qweather_key = 'cb6f07f06070405288d309e0e2b83176';
+  var gaud_map_key = '1c198845d787a0f0a7eaa732e933a040';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '112.982279,28.19409';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":130,"height":400},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
